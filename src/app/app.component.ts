@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-learning';
+  userName: any;
+  constructor() {
+  }
+
+  ngOnInit() {
+    
+  }
+
+  nameEventHander($event: any) {
+    this.userName = $event;
+  }
 }

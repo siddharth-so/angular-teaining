@@ -1,0 +1,15 @@
+<input type="text" (keyup)="onNameChange()" [(ngModel)]="username" placeholder="Enter user name here..">
+<button type="button" (click)="reset()">Reset</button>
+<button type="button" (click)="submit()">Send</button> 
+<div *ngFor="let user of usersArr">
+  <h3 
+  [ngStyle]="{'background-color': successBg(user.userName), 'color': successColor(user)}" 
+  *ngIf="user.userName">
+    Great to have you onboard, {{user.userName}}!! on {{user.addedTime}}
+  </h3>
+  <h3 
+  [ngStyle]="{'background-color': successBg(user.userName), 'color': successColor(user)}" 
+  *ngIf="user.userName === '' || user.userName === null">
+    Something went wrong on adding a  username on {{user.addedTime}}
+  </h3>
+</div>
