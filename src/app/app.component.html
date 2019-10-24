@@ -1,2 +1,8 @@
-<app-first-component [updatedText]="userName" (valueUpdated)="getUpdatedValue($event)"></app-first-component>
-<app-second-component (nameEvent)="nameEventHander($event)"></app-second-component>
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
